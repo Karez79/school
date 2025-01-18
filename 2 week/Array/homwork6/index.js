@@ -1,27 +1,48 @@
-function getDivisorsCount(number) {
-  // Проверка: является ли переданный аргумент числом
-  if (typeof number !== 'number' || isNaN(number)) {
-    return NaN; // Если не число — возвращаем NaN
-  }
+const numbers = [10, 4, 100, -5, 54, 2];
 
-  // Проверка на целое число больше нуля
-  if (!Number.isInteger(number) || number <= 0) {
-    alert('number должен быть целым числом и больше нуля!');
-    return;
+// Функция через цикл for
+function calculateCubesWithFor(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i] ** 3;
   }
-
-  // Подсчет делителей
-  let count = 0;
-  for (let i = 1; i <= number; i++) {
-    if (number % i === 0) {
-      count++; // Если число делится на i без остатка, увеличиваем счетчик
-    }
-  }
-
-  return count; // Возвращаем количество делителей
+  return sum;
 }
 
-console.log(getDivisorsCount(4)); // Вернет 3 (делители: 1, 2, 4)
-console.log(getDivisorsCount(5)); // Вернет 2 (делители: 1, 5)
-console.log(getDivisorsCount(12)); // Вернет 6 (делители: 1, 2, 3, 4, 6, 12)
-console.log(getDivisorsCount(30)); // Вернет 8 (делители: 1, 2, 3, 5, 6, 10, 15, 30)
+// Функция через цикл for...of
+function calculateCubesWithForOf(numbers) {
+  let sum = 0;
+  for (const number of numbers) {
+    sum += number ** 3;
+  }
+  return sum;
+}
+
+// Функция через метод forEach
+function calculateCubesWithForEach(numbers) {
+  let sum = 0;
+  numbers.forEach((number) => {
+    sum += number ** 3;
+  });
+  return sum;
+}
+
+// Функция через метод reduce
+function calculateCubesWithReduce(numbers) {
+  return numbers.reduce((sum, number) => sum + number ** 3, 0);
+}
+
+// Вывод результата
+console.log('Сумма кубов через функцию с for:', calculateCubesWithFor(numbers));
+console.log(
+  'Сумма кубов через функцию с for...of:',
+  calculateCubesWithForOf(numbers)
+);
+console.log(
+  'Сумма кубов через функцию с forEach:',
+  calculateCubesWithForEach(numbers)
+);
+console.log(
+  'Сумма кубов через функцию с reduce:',
+  calculateCubesWithReduce(numbers)
+);

@@ -1,19 +1,31 @@
-const getSumOfNumbers = (number, type = 'odd') => {
-  if (typeof number !== 'number') {
-    return NaN; // Проверяем, что `number` — это число
+const clientsEstimations = [];
+
+const askClientToGiveEstimation = () => {
+  const numberValue = Number(
+    prompt('Как вы оцениваете нашу кофейню от 1 до 10?')
+  );
+
+  // Проверяем, что введено число от 1 до 10
+  if (numberValue >= 1 && numberValue <= 10) {
+    clientsEstimations.push(numberValue);
+  } else {
+    alert('Пожалуйста, введите число от 1 до 10');
   }
-
-  let sum = 0; // Инициализируем сумму
-
-  for (let i = 0; i <= number; i++) {
-    if (type === 'odd' && i % 2 !== 0) {
-      sum += i; // Нечётные числа
-    } else if (type === 'even' && i % 2 === 0) {
-      sum += i; // Чётные числа
-    } else if (type === '') {
-      sum += i; // Все числа
-    }
-  }
-
-  return sum; // Возвращаем итоговую сумму
 };
+
+// Запрашиваем 5 оценок
+for (let i = 0; i < 5; i++) {
+  askClientToGiveEstimation();
+}
+
+// Выводим положительные и отрицательные оценки
+const goodEstimations = clientsEstimations.filter(
+  (numberValue) => numberValue > 5
+).length;
+const notGoodEstimations = clientsEstimations.filter(
+  (numberValue) => numberValue <= 5
+).length;
+
+alert(
+  `Всего положительных оценок: ${goodEstimations}. Всего отрицательных оценок: ${notGoodEstimations}`
+);
