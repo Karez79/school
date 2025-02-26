@@ -16,7 +16,12 @@ const renderAlbums = async () => {
 
     albums.forEach((album) => {
       const listItem = document.createElement('li');
-      listItem.textContent = album.title;
+      const link = document.createElement('a');
+
+      link.href = '#';
+      link.textContent = album.title;
+
+      listItem.append(link);
       list.append(listItem);
     });
 
