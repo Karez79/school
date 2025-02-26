@@ -13,4 +13,4 @@ setTimeout(() => {
 runCode().then(() => console.log('Zero Promise Invoked'));
 console.log('One');
 
-// before promise, one, Zero Promise Invoked, Zero Promise, Zero
+// before promise, one, zero, Zero Promise, Zero Promise Invoked
