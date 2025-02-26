@@ -25,3 +25,4 @@ getData(() => {
   });
 });
 console.log('End');
+// End, Success, user received, in promise, last set timeout, promise resolved
