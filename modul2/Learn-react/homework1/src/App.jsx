@@ -1,12 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Императивный стиль:
+  // Здесь явно создается состояние и переменная даты вручную — шаг за шагом.
+  const [count, setCount] = useState(0);
+
+  const currentDate = new Date();
+  const formattedTime = `${currentDate.toLocaleDateString(
+    "ru-RU"
+  )} ${currentDate.toLocaleTimeString("ru-RU")}`;
 
   return (
+    // Декларативный стиль:
+    // Описываем, *что* должно быть отображено, а не *как* это делать
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -18,6 +27,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
+        {/* Декларативно: описываем, как выглядит кнопка и её поведение */}
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
@@ -28,8 +38,10 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      {/* Декларативный стиль — просто описание отображения */}
+      <span style={{ color: "white" }}> {formattedTime}</span>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
