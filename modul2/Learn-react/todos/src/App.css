@@ -1,0 +1,143 @@
+.todo {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #fdfdfd;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todo__title {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #333;
+  text-align: center;
+}
+
+.todo__form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.todo__input {
+  flex-grow: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.todo__input:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 0 2px rgba(255, 152, 0, 0.2);
+}
+
+.todo__btn {
+  padding: 10px 16px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.todo__btn:hover {
+  background-color: #fb8c00;
+}
+
+.todo__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo__item {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+  border-left: 6px solid #ff9800;
+  background-color: #fffdf6;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.todo__item:hover {
+  background-color: #fff8e1;
+  transform: scale(1.01);
+}
+
+.todo__item--done {
+  border-left-color: #4caf50;
+  background-color: #f1fdf3;
+  text-decoration: line-through;
+  color: #777;
+}
+
+.todo__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.todo__delete {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.todo__delete:hover {
+  color: #f44336;
+}
+
+.todo__panel {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.todo__searchInput {
+  flex-grow: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.todo__searchInput:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 0 2px rgba(255, 152, 0, 0.2);
+}
+
+.todo__sortButton {
+  padding: 10px 16px;
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.todo__sortButton:hover {
+  background-color: #d5d5d5;
+}
+
+.todo__sortButton--active {
+  background-color: #ff9800;
+  color: #fff;
+}
