@@ -9,14 +9,8 @@
     {
       "userId": 2,
       "id": "2",
-      "title": "Go to the gym",
+      "title": "Go to the gym 1",
       "completed": true
-    },
-    {
-      "userId": 4,
-      "id": "3",
-      "title": "Call mom",
-      "completed": false
     },
     {
       "userId": 1,
