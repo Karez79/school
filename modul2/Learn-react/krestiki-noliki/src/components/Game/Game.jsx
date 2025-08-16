@@ -1,55 +1,36 @@
-import React, { useState } from 'react';
-import GameLayout from './GameLayout';
-import { WIN_PATTERNS } from '../../constants/winPatterns';
+import React from 'react';
+import PropTypes from 'prop-types';
+import GameContainer from '../../containers/GameContainer';
+import Information from '../Information/Information';
+import Field from '../Field/Field';
+import Button from '../UI/Button/Button';
+import styles from './Game.module.css';
 
-const EMPTY_FIELD = [...Array(9)].map(() => '');
-
-export default function Game() {
-  const [field, setField]       = useState(EMPTY_FIELD);
-  const [current, setCurrent]   = useState('X');
-  const [ended, setEnded]       = useState(false);
-  const [draw, setDraw]         = useState(false);
-
-  const handleCellClick = (index) => {
-    if (ended || field[index]) return;
-
-    const next = [...field];
-    next[index] = current;
-    setField(next);
-
-    const win = WIN_PATTERNS.some(p =>
-      p.every(i => next[i] === current),
-    );
-
-    if (win) {
-      setEnded(true);
-      return;
-    }
-
-    if (next.every(Boolean)) {
-      setDraw(true);
-      setEnded(true);
-      return;
-    }
-
-    setCurrent(current === 'X' ? '0' : 'X');
-  };
-
-  const resetGame = () => {
-    setField(EMPTY_FIELD);
-    setCurrent('X');
-    setEnded(false);
-    setDraw(false);
-  };
-
+export default function Game({ store }) {
   return (
-    <GameLayout
-      field={field}
-      currentPlayer={current}
-      isGameEnded={ended}
-      isDraw={draw}
-      onCellClick={handleCellClick}
-      onRestart={resetGame}
-    />
+    <GameContainer store={store}>
+      {({ gameState, onCellClick, onRestart }) => (
+        <div className={styles.wrapper}>
+          <Information gameState={gameState} />
+          
+          <Field 
+            field={gameState.field} 
+            onCellClick={onCellClick}
+            disabled={gameState.isGameEnded}
+          />
+          
+          <Button 
+            className={styles.restart} 
+            onClick={onRestart}
+          >
+            Начать заново
+          </Button>
+        </div>
+      )}
+    </GameContainer>
   );
 }
+
+Game.propTypes = {
+  store: PropTypes.object.isRequired
+};

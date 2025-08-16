@@ -31,7 +31,7 @@ export default function GameLayout({
 
 GameLayout.propTypes = {
   field:          PropTypes.arrayOf(PropTypes.string).isRequired,
-  currentPlayer:  PropTypes.oneOf(['X', '0']).isRequired,
+  currentPlayer:  PropTypes.oneOf(['X', 'O']).isRequired,
   isGameEnded:    PropTypes.bool.isRequired,
   isDraw:         PropTypes.bool.isRequired,
   onCellClick:    PropTypes.func.isRequired,

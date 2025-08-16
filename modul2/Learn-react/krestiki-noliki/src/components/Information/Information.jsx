@@ -1,11 +1,26 @@
 import React from 'react';
-import InformationLayout from './InformationLayout';
+import PropTypes from 'prop-types';
+import Display from '../UI/Display/Display';
+import { GameStatusService } from '../../services/GameStatusService';
+import styles from './Information.module.css';
 
-export default function Information({ currentPlayer, isGameEnded, isDraw }) {
-  let text;
-  if (isDraw) text = 'Ничья';
-  else if (isGameEnded) text = `Победа: ${currentPlayer}`;
-  else text = `Ходит: ${currentPlayer}`;
+export default function Information({ gameState, statusService = GameStatusService }) {
+  const statusMessage = statusService.getStatusMessage(gameState);
 
-  return <InformationLayout text={text} />;
+  return (
+    <Display 
+      content={statusMessage}
+      className={styles.info}
+    />
+  );
 }
+
+Information.propTypes = {
+  gameState: PropTypes.shape({
+    currentPlayer: PropTypes.string.isRequired,
+    isGameEnded: PropTypes.bool.isRequired,
+    isDraw: PropTypes.bool.isRequired,
+    winner: PropTypes.string
+  }).isRequired,
+  statusService: PropTypes.object
+};
