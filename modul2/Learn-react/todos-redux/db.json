@@ -1,0 +1,304 @@
+{
+  "todos": [
+    {
+      "userId": 5,
+      "id": "1",
+      "title": "Buy groceries 2",
+      "completed": true
+    },
+    {
+      "userId": 2,
+      "id": "2",
+      "title": "Go to the gym 1",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": "4",
+      "title": "Write report",
+      "completed": true
+    },
+    {
+      "userId": 3,
+      "id": "6",
+      "title": "Book a doctor appointment",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": "7",
+      "title": "Pay utility bills",
+      "completed": false
+    },
+    {
+      "userId": 2,
+      "id": "8",
+      "title": "Take out trash",
+      "completed": true
+    },
+    {
+      "userId": 3,
+      "id": "9",
+      "title": "Walk the dog",
+      "completed": true
+    },
+    {
+      "userId": 4,
+      "id": "10",
+      "title": "Backup files",
+      "completed": false
+    },
+    {
+      "userId": 2,
+      "id": "11",
+      "title": "Watch a movie",
+      "completed": false
+    },
+    {
+      "userId": 2,
+      "id": "12",
+      "title": "Clean the house",
+      "completed": false
+    },
+    {
+      "userId": 3,
+      "id": "13",
+      "title": "Charge laptop",
+      "completed": true
+    },
+    {
+      "userId": 4,
+      "id": "14",
+      "title": "Check emails",
+      "completed": true
+    },
+    {
+      "userId": 3,
+      "id": "15",
+      "title": "Buy a gift",
+      "completed": true
+    },
+    {
+      "userId": 4,
+      "id": "16",
+      "title": "Write an article",
+      "completed": true
+    },
+    {
+      "userId": 3,
+      "id": "17",
+      "title": "Learn new words",
+      "completed": false
+    },
+    {
+      "userId": 4,
+      "id": "18",
+      "title": "Plan the week",
+      "completed": false
+    },
+    {
+      "userId": 3,
+      "id": "19",
+      "title": "Organize desk",
+      "completed": true
+    },
+    {
+      "userId": 2,
+      "id": "20",
+      "title": "Update resume",
+      "completed": true
+    },
+    {
+      "userId": 2,
+      "id": "21",
+      "title": "Do laundry",
+      "completed": true
+    },
+    {
+      "userId": 5,
+      "id": "22",
+      "title": "Take car to service",
+      "completed": true
+    },
+    {
+      "userId": 4,
+      "id": "23",
+      "title": "Fix Wi-Fi",
+      "completed": false
+    },
+    {
+      "userId": 2,
+      "id": "24",
+      "title": "Cook dinner",
+      "completed": false
+    },
+    {
+      "userId": 4,
+      "id": "25",
+      "title": "Change password",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": "26",
+      "title": "Water the plants",
+      "completed": false
+    },
+    {
+      "userId": 5,
+      "id": "27",
+      "title": "Meditate 10 mins",
+      "completed": true
+    },
+    {
+      "userId": 5,
+      "id": "28",
+      "title": "Pay rent",
+      "completed": true
+    },
+    {
+      "userId": 4,
+      "id": "29",
+      "title": "Declutter inbox",
+      "completed": true
+    },
+    {
+      "userId": 4,
+      "id": "30",
+      "title": "Update software",
+      "completed": true
+    },
+    {
+      "userId": 4,
+      "id": "31",
+      "title": "Respond to feedback",
+      "completed": false
+    },
+    {
+      "userId": 4,
+      "id": "32",
+      "title": "Order takeaway",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": "33",
+      "title": "Go for a run",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": "34",
+      "title": "Send invoice",
+      "completed": true
+    },
+    {
+      "userId": 2,
+      "id": "35",
+      "title": "Prepare presentation",
+      "completed": false
+    },
+    {
+      "userId": 4,
+      "id": "36",
+      "title": "Clean up desktop",
+      "completed": false
+    },
+    {
+      "userId": 4,
+      "id": "37",
+      "title": "Attend online meeting",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": "38",
+      "title": "Renew subscription",
+      "completed": true
+    },
+    {
+      "userId": 4,
+      "id": "39",
+      "title": "Buy dog food",
+      "completed": false
+    },
+    {
+      "userId": 5,
+      "id": "40",
+      "title": "Test new feature",
+      "completed": false
+    },
+    {
+      "userId": 4,
+      "id": "41",
+      "title": "Check calendar",
+      "completed": true
+    },
+    {
+      "userId": 5,
+      "id": "42",
+      "title": "Review code",
+      "completed": true
+    },
+    {
+      "userId": 5,
+      "id": "43",
+      "title": "Write blog post",
+      "completed": true
+    },
+    {
+      "userId": 5,
+      "id": "44",
+      "title": "Send birthday wishes",
+      "completed": true
+    },
+    {
+      "userId": 3,
+      "id": "45",
+      "title": "Check news",
+      "completed": true
+    },
+    {
+      "userId": 4,
+      "id": "46",
+      "title": "Refactor component",
+      "completed": false
+    },
+    {
+      "userId": 4,
+      "id": "47",
+      "title": "Plan weekend trip",
+      "completed": false
+    },
+    {
+      "userId": 3,
+      "id": "48",
+      "title": "Schedule interview",
+      "completed": true
+    },
+    {
+      "userId": 4,
+      "id": "49",
+      "title": "Post on social media",
+      "completed": false
+    },
+    {
+      "userId": 4,
+      "id": "50",
+      "title": "Update project docs",
+      "completed": true
+    },
+    {
+      "id": "1b0c",
+      "title": "453535",
+      "userId": 1,
+      "completed": true
+    },
+    {
+      "id": "4114",
+      "title": "кря",
+      "userId": 1,
+      "completed": false
+    }
+  ]
+}
